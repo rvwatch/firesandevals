@@ -27,7 +27,8 @@ export const mapStateToProps = state => ({
 });
 
 CardContainer.propTypes = {
-  houses: array
+  houses: array,
+  swornMembers: array
 };
 
 export default connect(mapStateToProps, null)(CardContainer);
