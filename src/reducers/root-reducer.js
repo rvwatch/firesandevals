@@ -5,5 +5,4 @@ const rootReducer = combineReducers({
   houses
 });
 
-
 export default rootReducer;

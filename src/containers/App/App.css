@@ -32,8 +32,14 @@
   transform: scale(1.5,1.5);
 }
 
-#wolf {
-  height: 200px;
+.wolf {
+  height: 400px;
+  width: 500px;
+  margin: auto;
+  display: block;
+  background-image: url('./wolf.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .Display-info {
