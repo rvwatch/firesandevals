@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Card = () => {
+export const Card = ({
+  name,
+  founded,
+  seats,
+  titles,
+  coatOfArms,
+  ancestralWeapons,
+  words
+}) => {
   return (
     <article>
-      <h1>House Card!!</h1>
+      <h1>{name}</h1>
     </article>
   );
-}
+};
+
+

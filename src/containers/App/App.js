@@ -5,6 +5,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { addHouses } from '../../actions';
 import {fetchData} from '../../ApiCalls/fetchData';
+import CardContainer from '../CardContainer/CardContainer';
 class App extends Component {
 
   async componentDidMount() {
@@ -24,7 +25,7 @@ class App extends Component {
           }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
-        
+          <CardContainer />
         </div>
       </div>
     );
