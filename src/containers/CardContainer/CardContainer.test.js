@@ -17,6 +17,14 @@ describe('CardContainer', () => {
       const mapped = mapStateToProps(mockState);
       expect(mapped.houses).toEqual(expected);
     });
+
+    it('should add swornMembers to props', () => {
+      const swornMembers = [{"died": "", "house": "House Dayne of Starfall", "name": "Allyria Dayne"}];
+      const expected = swornMembers;
+      const mockState = {swornMembers};
+      const mapped = mapStateToProps(mockState);
+      expect(mapped.swornMembers).toEqual(expected);
+    });
   });
 
 });

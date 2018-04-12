@@ -19,7 +19,7 @@ export const Card = ({
         <p>Coat of Arms: {coatOfArms}</p>
         <p>Ancestral Weapons: {ancestralWeapons}</p>
         <p>{words}</p>
-        <p>{swornMembers}</p>
+        {swornMembers}
     </article>
   );
 };
