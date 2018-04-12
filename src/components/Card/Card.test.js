@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {Card} from './Card';
+import { shallow } from 'enzyme';
+import { Card } from './Card';
 import * as mock from '../../MockData/MockData';
 
 describe('Card', () => {
@@ -8,4 +8,4 @@ describe('Card', () => {
     const wrapper = shallow(<Card houses={mock.mockHouses} />);
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

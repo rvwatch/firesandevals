@@ -31,12 +31,6 @@ ShallowWrapper {
           <h2>
                     Welcome to Westeros
           </h2>
-          <button
-                    onClick={[Function]}
-          >
-                     
-                    FAKE ACTION
-          </button>
 </div>,
         <div
           className="Display-info"
@@ -62,12 +56,6 @@ ShallowWrapper {
             <h2>
               Welcome to Westeros
 </h2>,
-            <button
-              onClick={[Function]}
->
-               
-              FAKE ACTION
-</button>,
           ],
           "className": "App-header",
         },
@@ -96,24 +84,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": "Welcome to Westeros",
             "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                " ",
-                "FAKE ACTION",
-              ],
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": Array [
-              " ",
-              "FAKE ACTION",
-            ],
-            "type": "button",
           },
         ],
         "type": "div",
@@ -159,12 +129,6 @@ ShallowWrapper {
             <h2>
                         Welcome to Westeros
             </h2>
-            <button
-                        onClick={[Function]}
-            >
-                         
-                        FAKE ACTION
-            </button>
 </div>,
           <div
             className="Display-info"
@@ -190,12 +154,6 @@ ShallowWrapper {
               <h2>
                 Welcome to Westeros
 </h2>,
-              <button
-                onClick={[Function]}
->
-                 
-                FAKE ACTION
-</button>,
             ],
             "className": "App-header",
           },
@@ -224,24 +182,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": "Welcome to Westeros",
               "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  " ",
-                  "FAKE ACTION",
-                ],
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": Array [
-                " ",
-                "FAKE ACTION",
-              ],
-              "type": "button",
             },
           ],
           "type": "div",
