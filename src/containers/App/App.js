@@ -12,7 +12,7 @@ class App extends Component {
 
     console.log('in component did mount');
     const houses = await fetchData();
-    
+    console.log(houses)
     this.props.addHouses(houses)
   }
 
