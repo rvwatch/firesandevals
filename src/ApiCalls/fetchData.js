@@ -4,6 +4,6 @@ export const fetchData = async () => {
     const houses = await response.json();
     return houses;
   } catch (errs) {
-    throw new Error(errs);
+    throw new Error(errs.message);
   }
 };
