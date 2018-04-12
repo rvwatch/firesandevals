@@ -14,11 +14,11 @@ export const Card = ({
       <h2>{name}</h2>
       <h1>{founded}</h1>
       <ul>
-        <li>seats</li>
-        <li>titles</li>
-        <li>coatOfArms</li>
-        <li>ancestralWeapons</li>
-        <li>words</li>
+        <li>{seats}</li>
+        <li>{titles}</li>
+        <li>{coatOfArms}</li>
+        <li>{ancestralWeapons}</li>
+        <li>{words}</li>
       </ul>
     </article>
   );

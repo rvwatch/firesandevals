@@ -6,7 +6,7 @@ export const CardContainer = props => {
 
   const renderHouses = props.houses.length ? props.houses.map(house => (
     <Card key={Date.now()} {...house} />
-  )) : '';
+  )) : null;
   return (
     <section className='Container'>
       {renderHouses}
