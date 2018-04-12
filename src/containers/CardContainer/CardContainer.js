@@ -4,7 +4,7 @@ import { Card } from '../../components/Card/Card';
 
 export const CardContainer = props => {
 
-  const renderHouses = props.houses.length ? props.houses.map(house => (
+  const renderHouses = props.houses ? props.houses.map(house => (
     <Card key={house.name} {...house} />
   )) : null;
   return (

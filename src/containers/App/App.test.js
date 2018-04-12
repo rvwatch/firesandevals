@@ -7,7 +7,8 @@ import * as mock from '../../MockData/MockData.js';
 describe('App', () => {
 
   it('should match the snapshot', () => {
-    const wrapper = shallow(<App />);
+    const addHouses = jest.fn()
+    const wrapper = shallow(<App addHouses={addHouses} />);
     expect(wrapper).toMatchSnapshot();
   });
 
