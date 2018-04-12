@@ -5,7 +5,7 @@ import { array } from 'prop-types';
 
 export const CardContainer = props => {
   const renderHouses = props.houses
-    ? props.houses.map(house => <Card key={house.name} {...house} />)
+    ? props.houses.map(house => <Card selectHouse={props.selectHouse} key={house.name} {...house} />)
     : null;
   return <section className="Container">{renderHouses}</section>;
 };
@@ -13,6 +13,8 @@ export const CardContainer = props => {
 export const mapStateToProps = state => ({
   houses: state.houses
 });
+
+
 
 CardContainer.propTypes = {
   houses: array

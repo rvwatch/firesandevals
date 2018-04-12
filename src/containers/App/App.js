@@ -21,10 +21,13 @@ export class App extends Component {
       const houses = await fetchData();
       this.props.addHouses(houses);
 
-      const swornUrls = this.props.houses.map(house => house.swornMembers);
-      const swornMembers = await swornData(swornUrls);
+      const swornBlocks = this.props.houses.map(house => ({urls: house.swornMembers, name: house.name}));
+      
 
       this.setState({ loading: false });
+      const sworn = await swornData(swornBlocks);
+      this.props.addSwornMembers(sworn);
+      
     } catch (errs) {
       this.setState({
         error: errs
@@ -51,11 +54,13 @@ export class App extends Component {
 
 App.propTypes = {
   houses: array,
-  addHouses: func.isRequired
+  addHouses: func,
+  addSwornMembers: func
 };
 
 export const mapStateToProps = ({ houses }) => ({ houses });
 export const mapDispatchToProps = dispatch => ({
-  addHouses: houses => dispatch(addHouses(houses))
+  addHouses: houses => dispatch(addHouses(houses)),
+  addSwornMembers: sworn => dispatch(addSwornMembers(sworn))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(App);
