@@ -8,7 +8,7 @@ describe('fetchData apiCall', () => {
         name: "House Corbray of Heart's Home",
         region: '',
         coatOfArms:
-          'Three black ravens in flight, holding three red hearts, on a white field(Argent, three ravens volant sable, each clutching in their claws a heart gules)',
+          'Three black ravens in flight)',
         words: '',
         titles: ["Lord of Heart's Home", 'King of the Fingers (historical)'],
         seats: ["Heart's Home"],
@@ -36,7 +36,7 @@ describe('fetchData apiCall', () => {
         name: 'House Dayne of Starfall',
         region: 'Dorne',
         coatOfArms:
-          'A white sword and falling star crossed on lilac (Purpure, a blazing star bendways surmounted by a sword bendways sinister argent)',
+          'A white sword and falling star crossed on lilac',
         words: '',
         titles: ['Lord of Starfall', 'King of the Torrentine (historical)'],
         seats: ['Starfall'],
@@ -83,6 +83,6 @@ describe('fetchData apiCall', () => {
 
     const expected = 'error';
     const response = await fetchData();
-   expect(response).toEqual(expected);
+    expect(response).toEqual(expected);
   });
 });

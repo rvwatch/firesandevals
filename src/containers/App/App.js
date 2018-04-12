@@ -8,12 +8,8 @@ import {fetchData} from '../../ApiCalls/fetchData';
 class App extends Component {
 
   async componentDidMount() {
-    // make the initial fetch call here
-
-    console.log('in component did mount');
     const houses = await fetchData();
-    console.log(houses)
-    this.props.addHouses(houses)
+    this.props.addHouses(houses);
   }
 
   render() {

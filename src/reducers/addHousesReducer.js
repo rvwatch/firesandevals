@@ -1,11 +1,11 @@
 const addHousesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_HOUSES':
-      return action.houses;
+  case 'ADD_HOUSES':
+    return action.houses;
 
-    default:
-      return state;
+  default:
+    return state;
   }
 };
 
-export default addHousesReducer; 
+export default addHousesReducer;
