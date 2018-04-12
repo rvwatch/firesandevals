@@ -6,15 +6,22 @@ import { connect } from 'react-redux';
 import { addHouses } from '../../actions';
 import {fetchData} from '../../ApiCalls/fetchData';
 import CardContainer from '../CardContainer/CardContainer';
-class App extends Component {
-  
+export class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      error: ''
+    }
+  }
 
   async componentDidMount() {
     try{
     const houses = await fetchData();
     this.props.addHouses(houses);
     } catch(errs){
-
+      this.setState({
+        error: errs
+      });
     }
   }
 
@@ -42,8 +49,8 @@ App.propTypes = {
   addHouses: func.isRequired
 };
 
-const mapStateToProps = ({ houses }) => ({ houses });
-const mapDispatchToProps = dispatch => ({ addHouses:
+export const mapStateToProps = ({ houses }) => ({ houses });
+export const mapDispatchToProps = dispatch => ({ addHouses:
   (houses) => dispatch(addHouses(houses))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(App);
