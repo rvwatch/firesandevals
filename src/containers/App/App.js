@@ -3,8 +3,18 @@ import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import { fakeAction } from '../../actions';
+import { addHouses } from '../../actions';
+import {fetchData} from '../../ApiCalls/fetchData';
 class App extends Component {
+
+  async componentDidMount() {
+    // make the initial fetch call here
+
+    console.log('in component did mount');
+    const houses = await fetchData();
+    
+    this.props.addHouses(houses)
+  }
 
   render() {
     return (
@@ -26,12 +36,12 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  houses: shape({ houses: string }),
+  addHouses: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
+const mapStateToProps = ({ houses }) => ({ houses });
+const mapDispatchToProps = dispatch => ({ addHouses:
+  (houses) => dispatch(addHouses(houses))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(App);
