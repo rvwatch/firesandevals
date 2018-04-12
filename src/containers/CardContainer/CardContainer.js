@@ -8,7 +8,7 @@ export const CardContainer = props => {
     <Card key={Date.now()} {...house} />
   )) : '';
   return (
-    <section>
+    <section className='Container'>
       {renderHouses}
     </section>
   );

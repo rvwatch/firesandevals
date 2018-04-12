@@ -4,13 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { addHouses } from '../../actions';
-import {fetchData} from '../../ApiCalls/fetchData';
+import {getHouses} from '../../ApiCalls/getHouses';
 import CardContainer from '../CardContainer/CardContainer';
 class App extends Component {
 
   async componentDidMount() {
-    const houses = await fetchData();
-    this.props.addHouses(houses);
+    const houses = await getHouses();
+    //this.props.addHouses(houses);
   }
 
   render() {
