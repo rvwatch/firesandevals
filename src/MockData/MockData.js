@@ -3,8 +3,7 @@ export const mockHouse = [
     url: 'https://www.anapioficeandfire.com/api/houses/81',
     name: "House Corbray of Heart's Home",
     region: '',
-    coatOfArms:
-      'Three black ravens in flight)',
+    coatOfArms: 'Three black ravens in flight)',
     words: '',
     titles: ["Lord of Heart's Home", 'King of the Fingers (historical)'],
     seats: ["Heart's Home"],
@@ -31,8 +30,7 @@ export const mockHouse = [
     url: 'https://www.anapioficeandfire.com/api/houses/99',
     name: 'House Dayne of Starfall',
     region: 'Dorne',
-    coatOfArms:
-      'A white sword and falling star crossed on lilac',
+    coatOfArms: 'A white sword and falling star crossed on lilac',
     words: '',
     titles: ['Lord of Starfall', 'King of the Torrentine (historical)'],
     seats: ['Starfall'],
@@ -53,5 +51,13 @@ export const mockHouse = [
       'https://www.anapioficeandfire.com/api/characters/1060',
       'https://www.anapioficeandfire.com/api/characters/2121'
     ]
+  }
+];
+
+export const mockSwornMembers = [
+  {
+    name: 'Allyria Dayne',
+    died: '',
+    house: 'House Dayne of Starfall'
   }
 ];

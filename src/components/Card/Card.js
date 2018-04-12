@@ -7,7 +7,8 @@ export const Card = ({
   titles,
   coatOfArms,
   ancestralWeapons,
-  words
+  words,
+  swornMembers
 }) => {
   return (
     <article className='Card'>
@@ -18,10 +19,9 @@ export const Card = ({
         <p>Coat of Arms: {coatOfArms}</p>
         <p>Ancestral Weapons: {ancestralWeapons}</p>
         <p>{words}</p>
+        <p>{swornMembers}</p>
     </article>
   );
 };
-
-// on click, the 
 
 

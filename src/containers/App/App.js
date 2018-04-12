@@ -3,7 +3,7 @@ import { array, func } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
-import { addHouses } from '../../actions';
+import { addHouses, addSwornMembers } from '../../actions';
 import { fetchData } from '../../ApiCalls/fetchData';
 import {swornData} from '../../ApiCalls/swornData';
 import CardContainer from '../CardContainer/CardContainer';
@@ -20,11 +20,8 @@ export class App extends Component {
     try {
       const houses = await fetchData();
       this.props.addHouses(houses);
-
-      const swornBlocks = this.props.houses.map(house => ({urls: house.swornMembers, name: house.name}));
-      
-
       this.setState({ loading: false });
+      const swornBlocks = this.props.houses.map(house => ({urls: house.swornMembers, name: house.name}));
       const sworn = await swornData(swornBlocks);
       this.props.addSwornMembers(sworn);
       
@@ -58,7 +55,9 @@ App.propTypes = {
   addSwornMembers: func
 };
 
-export const mapStateToProps = ({ houses }) => ({ houses });
+export const mapStateToProps = (state) => ({ 
+  houses: state.houses, 
+  swornMembers: state.swornMembers });
 export const mapDispatchToProps = dispatch => ({
   addHouses: houses => dispatch(addHouses(houses)),
   addSwornMembers: sworn => dispatch(addSwornMembers(sworn))

@@ -38,6 +38,7 @@ ShallowWrapper {
           Ancestral Weapons: 
 </p>,
         <p />,
+        <p />,
       ],
       "className": "Card",
     },
@@ -150,6 +151,17 @@ ShallowWrapper {
         "rendered": null,
         "type": "p",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "p",
+      },
     ],
     "type": "article",
   },
@@ -177,6 +189,7 @@ ShallowWrapper {
           <p>
             Ancestral Weapons: 
 </p>,
+          <p />,
           <p />,
         ],
         "className": "Card",
@@ -277,6 +290,17 @@ ShallowWrapper {
             "Ancestral Weapons: ",
             undefined,
           ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
           "type": "p",
         },
         Object {
